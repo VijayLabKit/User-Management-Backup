@@ -1,20 +1,48 @@
-# User Management & Backup Script
+# 🐧 User Management & Backup Script  
 
-## 📌 Overview
-This project automates Linux user management and backup tasks using a shell script.  
-It supports:
-- Add / Delete / Modify users
-- Group creation
-- Directory backup with tar
-- Logging of actions
-- Optional email notifications
+## 📌 Overview  
+This project provides a **Linux shell script** to automate **user management** and **backup tasks**.  
+It helps system administrators manage users/groups efficiently and ensures reliable backups of important directories.  
 
-## ⚙️ Requirements
-- Linux (Ubuntu/Debian recommended)
-- Bash shell
-- `tar`, `mailutils` (for email alerts)
+---
 
-## 🚀 How to Run
+## ✨ Features  
+- 👤 **User Management**
+  - Add users (with password prompt)  
+  - Delete users  
+  - Modify user shell  
+
+- 👥 **Group Management**
+  - Create new groups  
+
+- 💾 **Backup System**
+  - Compress & archive any directory  
+  - Store backups in `/var/backups/custom_backup/`  
+  - Timestamped backup files for uniqueness  
+
+- 🔄 **Restore System**
+  - Restore backups into a chosen directory  
+
+- 📝 **Logging**
+  - All actions logged in `/var/log/user_mgmt.log`  
+
+- 📧 **Email Alerts (Optional)**
+  - Sends backup completion notifications (if `mail` is installed)  
+
+---
+
+## ⚙️ Requirements  
+- Linux OS (Ubuntu/Debian recommended)  
+- Bash shell  
+- `tar` (default in Linux)  
+- `mailutils` (optional, only if you want email alerts)  
+
+---
+
+## 🚀 How to Run  
+
+1. Clone this repo:  
 ```bash
-chmod +x user_mgmt.sh
-./user_mgmt.sh
+git clone https://github.com/VijayLabKit/User-Management-Backup.git
+cd User-Management-Backup
+
